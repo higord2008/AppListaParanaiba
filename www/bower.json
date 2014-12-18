@@ -1,0 +1,15 @@
+{
+  "name": "Lista Paranaiba",
+  "version": "1.0",
+  "description": "Lista Paranaiba",
+  "main": "index.html",
+  "authors": [
+    "Higor"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.5.2",
+    "paper-elements": "Polymer/paper-elements#~0.5.2"
+  }
+}

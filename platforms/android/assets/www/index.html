@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Test Project</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
+        <link rel="import" href="bower_components/core-scaffold/core-scaffold.html">
+        <link rel="import" href="bower_components/core-header-panel/core-header-panel.html">
+        <link rel="import" href="bower_components/core-menu/core-menu.html">
+        <link rel="import" href="bower_components/core-menu/core-submenu.html">
+        <link rel="import" href="bower_components/core-item/core-item.html">
+        <link rel="import" href="bower_components/paper-toast/paper-toast.html">
+        <link rel="import" href="bower_components/paper-fab/paper-fab.html">
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+        <style>
+            html, body {
+                height: 100%;
+                margin: 0;
+            }
+            body {
+                font-family: sans-serif;
+            }
+            core-scaffold {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+            }
+            #core_toolbar {
+                color: rgb(255, 255, 255);
+                background-color: rgb(79, 125, 201);
+            }
+            #core_card {
+                width: 96%;
+                height: 300px;
+                border-top-left-radius: 2px;
+                border-top-right-radius: 2px;
+                border-bottom-right-radius: 2px;
+                border-bottom-left-radius: 2px;
+                box-shadow: rgba(0, 0, 0, 0.0980392) 0px 2px 4px, rgba(0, 0, 0, 0.0980392) 0px 0px 3px;
+                margin: 2%;
+                background-color: rgb(255, 255, 255);
+                text-align: left;
+            }
+            paper-fab {
+                position: absolute;
+                right: 20px; 
+                bottom: 20px;
+            }
+        </style>
+    </head>
+    <body unresolved>
+        <core-scaffold>
+            <core-header-panel navigation flex mode="seamed">
+                <core-toolbar id="core_toolbar">Navegação</core-toolbar>
+                <core-menu theme="core-light-theme" selectedItem="{{item}}">
+                    <core-item icon="settings" label="Página Inicial"></core-item>
+                    <core-submenu icon="settings" label="Categorias">
+                        <core-item label="Bebidas"></core-item>
+                        <core-item label="Farmacias"></core-item>
+                        <core-item label="Hoteis"></core-item>
+                        <core-item label="Alimentação"></core-item>
+                        <core-item label="..."></core-item>
+                    </core-submenu>                    
+                </core-menu>
+            </core-header-panel>
+            <div>selected label: {{item.label}}</div>
+            <div tool>Lista Paranaíba</div>
+            <core-card id="core_card" vertical layout start>
+                <div style="padding: 20px;">
+                    Aqui ficará os melhores locais
+                </div>
+            </core-card>
+        </core-scaffold>
+    </body>
+</html>
